@@ -1,6 +1,6 @@
 {
   "name": "drf-redux-auth",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "Async React/Redux Authentication library for Django Rest Framework Token Authentication",
   "main": "./dist/index.js",
   "scripts": {

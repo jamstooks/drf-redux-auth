@@ -22,7 +22,7 @@ Setup should be simple. Just add the reducers where you `combineReducers`:
       ...
     });
     
-This also rely's on an environment variable, `REACT_APP_AUTH_URL`
+This also relies on an environment variable, `REACT_APP_AUTH_URL`
 for the DRF URL for now.
     
 ## State Shape
@@ -53,6 +53,8 @@ The state provided by this libary is the following:
 Two extremely basic components are available:
 
     import { AuthStatus, Login } from "drf-redux-auth";
+    
+You'll want to write your own, but they're useful for reference.
     
 ## References
 
