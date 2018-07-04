@@ -1,5 +1,7 @@
 # Django Rest Framework Authentication for React and Redux
 
+[![Build Status](https://travis-ci.org/jamstooks/drf-redux-auth.svg?branch=master)](https://travis-ci.org/jamstooks/drf-redux-auth)
+
 Provides actions, reducers, and components to authenticate with
 django using Django Rest Framework's
 [Token Authentication](http://www.django-rest-framework.org/api-guide/authentication/#tokenauthentication)
