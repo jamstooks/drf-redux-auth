@@ -5,6 +5,13 @@ export default class Login extends React.Component {
   render() {
     const { errorMessage } = this.props;
 
+    let error = [];
+    if (errorMessage !== undefined) {
+      if (Array.isArray(errorMessage))
+        errorMessage.forEach(m => error.push(<p>{m}</p>));
+      else error.push(<p>{errorMessage}</p>);
+    }
+
     return (
       <div>
         <input
@@ -21,7 +28,7 @@ export default class Login extends React.Component {
         />
         <button onClick={event => this.handleClick(event)}>Login</button>
 
-        {errorMessage && <p>{errorMessage}</p>}
+        {error}
       </div>
     );
   }
