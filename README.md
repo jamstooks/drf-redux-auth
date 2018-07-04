@@ -12,7 +12,7 @@ django using Django Rest Framework's
 
 Setup should be simple. Just add the reducers where you `combineReducers`:
 
-    import authReducer from "drf-react-auth";
+    import { authReducer } from "drf-redux-auth";
     
     const rootReducer = combineReducers({
       ...

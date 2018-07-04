@@ -7,7 +7,7 @@ import {
 } from "./actions";
 
 // @todo - look into the need for token expiration
-const auth = (
+const authReducer = (
   state = {
     isFetching: false,
     isAuthenticated: localStorage.getItem("drf_token") ? true : false,
@@ -71,4 +71,4 @@ const auth = (
   }
 };
 
-export default auth;
+export default authReducer;

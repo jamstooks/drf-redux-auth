@@ -1,4 +1,4 @@
-export { authReducer } from "./reducers";
+export { default as authReducer } from "./reducers";
 export { loginUser, logoutUser } from "./actions";
-export { AuthStatus } from "./components/AuthStatus";
-export { Login } from "./components/Login";
+export { default as AuthStatus } from "./components/AuthStatus";
+export { default as Login } from "./components/Login";

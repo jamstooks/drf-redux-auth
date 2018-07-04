@@ -1,4 +1,4 @@
-import auth from "./reducers";
+import authReducer from "./reducers";
 import localStorage from "./testUtils";
 
 const CREDS = {
@@ -19,7 +19,7 @@ describe("auth reducers", () => {
   });
 
   it("should handle initial state", () => {
-    expect(auth(undefined, [])).toEqual({
+    expect(authReducer(undefined, [])).toEqual({
       isFetching: false,
       isAuthenticated: false,
       username: null,
@@ -31,7 +31,7 @@ describe("auth reducers", () => {
   it("should persist login state", () => {
     localStorage.setItem("drf_token", "blahblahtoken");
     localStorage.setItem("drf_username", "user");
-    expect(auth(undefined, [])).toEqual({
+    expect(authReducer(undefined, [])).toEqual({
       isFetching: false,
       isAuthenticated: true,
       username: "user",
@@ -44,7 +44,7 @@ describe("auth reducers", () => {
 
   it("should handle LOGIN_REQUEST ", () => {
     expect(
-      auth(
+      authReducer(
         {
           isFetching: false,
           isAuthenticated: false,
@@ -68,7 +68,7 @@ describe("auth reducers", () => {
 
   it("should handle LOGIN_SUCCESS ", () => {
     expect(
-      auth(
+      authReducer(
         {
           isFetching: true,
           isAuthenticated: false,
@@ -95,7 +95,7 @@ describe("auth reducers", () => {
 
   it("should handle LOGIN_FAILURE ", () => {
     expect(
-      auth(
+      authReducer(
         {
           isFetching: true,
           isAuthenticated: false,
@@ -119,7 +119,7 @@ describe("auth reducers", () => {
 
   it("should handle LOGOUT_USER ", () => {
     expect(
-      auth(
+      authReducer(
         {
           isFetching: false,
           isAuthenticated: true,
