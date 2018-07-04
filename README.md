@@ -12,7 +12,7 @@ django using Django Rest Framework's
 
 Setup should be simple. Just add the reducers where you `combineReducers`:
 
-    import authReducer from 'drf-react-auth';
+    import authReducer from "drf-react-auth";
     
     const rootReducer = combineReducers({
       ...
@@ -20,16 +20,6 @@ Setup should be simple. Just add the reducers where you `combineReducers`:
       ...
     });
     
-Then apply the middleware where you create your store:
-
-    const store = createStore(
-      rootReducer,
-      applyMiddleware(
-        ...,
-        djangoDRFAuthMiddleware,
-        ...
-      )
-    );
     
 ## State Shape
 
