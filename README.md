@@ -22,6 +22,8 @@ Setup should be simple. Just add the reducers where you `combineReducers`:
       ...
     });
     
+This also rely's on an environment variable, `REACT_APP_AUTH_URL`
+for the DRF URL for now.
     
 ## State Shape
 
@@ -34,6 +36,23 @@ The state provided by this libary is the following:
         isFetching: <bool>,
         errorMessage
     }
+
+## Actions
+
+    import { loginUser, logoutUser } from "drf-redux-auth";
+    
+    const mapDispatchToProps = dispatch => ({
+      ...
+      logout: () => dispatch(logoutUser()),
+      login: creds => dispatch(loginUser(creds)),
+      ...
+    });
+    
+## Components
+
+Two extremely basic components are available:
+
+    import { AuthStatus, Login } from "drf-redux-auth";
     
 ## References
 

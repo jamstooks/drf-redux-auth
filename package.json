@@ -1,6 +1,6 @@
 {
   "name": "drf-redux-auth",
-  "version": "0.1.9",
+  "version": "0.2.1",
   "description": "Async React/Redux Authentication library for Django Rest Framework Token Authentication",
   "main": "./dist/index.js",
   "scripts": {
@@ -21,6 +21,7 @@
   ],
   "author": "Benjamin W Stookey",
   "license": "MIT",
+  "repository": "github:jamstooks/drf-redux-auth",
   "dependencies": {
     "prop-types": "15.6.1",
     "react": "^16.4.1",
