@@ -44,7 +44,9 @@ describe("auth actions", () => {
       },
       {
         type: "LOGIN_FAILURE",
-        message: ["Unable to log in with provided credentials."]
+        message: {
+          non_field_errors: ["Unable to log in with provided credentials."]
+        }
       }
     ];
     const store = mockStore({ auth: {} });

@@ -52,7 +52,7 @@ export const loginUser = creds => {
         })
         .then(({ json, response }) => {
           if (!response.ok) {
-            dispatch(loginError(json.non_field_errors));
+            dispatch(loginError(json));
             return Promise.reject(json);
           } else {
             // Dispatch the success action
