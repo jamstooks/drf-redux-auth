@@ -6,6 +6,8 @@ Provides actions, reducers, and components to authenticate with
 django using Django Rest Framework's
 [Token Authentication](http://www.django-rest-framework.org/api-guide/authentication/#tokenauthentication)
 
+[Demo Available](https://github.com/jamstooks/drf-redux-auth-demo)
+
 ## Install
 
     npm install --save drf-redux-auth
