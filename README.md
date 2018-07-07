@@ -63,7 +63,22 @@ Two extremely basic components are available:
     
 You'll want to write your own, but they're useful for reference.
 Another reference component can be seen in the
-[demo]([Demo Available](https://github.com/jamstooks/drf-redux-auth-demo)
+[demo](https://github.com/jamstooks/drf-redux-auth-demo).
+
+## Django Rest Framework
+
+Enabling token auth is easy. Just add to `INSTALLED_APPS`:
+
+    'rest_framework',
+    'rest_framework.authtoken',
+
+and update your `urls.py`:
+
+    from rest_framework.authtoken.views import obtain_auth_token
+    urlpatterns = [
+        ...
+        path('api/token-auth/', obtain_auth_token),
+    ]
     
 ## References
 
