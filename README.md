@@ -24,8 +24,21 @@ Setup should be simple. Just add the reducers where you `combineReducers`:
       ...
     });
     
-This also relies on an environment variable, `REACT_APP_AUTH_URL`
-for the DRF URL for now.
+and provide your actions to your components in your containers:
+
+    import { loginUser, logoutUser } from "drf-redux-auth";
+    
+    ...
+    
+    const mapDispatchToProps = dispatch => ({
+      ...
+      logout: () => dispatch(logoutUser()),
+      login: creds => dispatch(loginUser(creds)),
+      ...
+    });
+    
+Note: this currently relies on an environment variable,
+`REACT_APP_AUTH_URL` for the DRF URL for now.
     
 ## State Shape
 
@@ -38,17 +51,9 @@ The state provided by this libary is the following:
         isFetching: <bool>,
         errorMessage
     }
-
-## Actions
-
-    import { loginUser, logoutUser } from "drf-redux-auth";
     
-    const mapDispatchToProps = dispatch => ({
-      ...
-      logout: () => dispatch(logoutUser()),
-      login: creds => dispatch(loginUser(creds)),
-      ...
-    });
+The token and username are also stored in `localStorage`
+to persist auth status past reload.
     
 ## Components
 
@@ -57,6 +62,8 @@ Two extremely basic components are available:
     import { AuthStatus, Login } from "drf-redux-auth";
     
 You'll want to write your own, but they're useful for reference.
+Another reference component can be seen in the
+[demo]([Demo Available](https://github.com/jamstooks/drf-redux-auth-demo)
     
 ## References
 
